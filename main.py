@@ -16,11 +16,12 @@ for i in range(line):
 
 outtext=''
 for i in range(length):
+	if i != 0:
+		outtext+='\n'
 	for j in range(line):
 		if j != 0:
 			outtext+=(' ')
 		outtext += intext[j][i]
-	outtext+='\n'
 
 f=open('output', 'w')
 f.write(outtext)
