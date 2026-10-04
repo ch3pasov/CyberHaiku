@@ -7,11 +7,11 @@ f.close()
 if intext[-1]=='':
 	intext.pop(-1)
 
+intext=[text.lower() for text in intext]
 line=len(intext)
-length=max(len(intext[i]) for i in range(line))
+length=max((len(intext[i]) for i in range(line)), default=0)
 
 for i in range(line):
-	intext[i]=intext[i].lower()
 	intext[i]+=(length-len(intext[i])) * (' ')
 
 outtext=''
